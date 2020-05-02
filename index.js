@@ -288,14 +288,8 @@ function addArtist(array, id, name, years, genre, nationality, bio){
             nationality: nationality,
             bio: bio
           }  
-  array.concat(newArtist);
-    // array.push (`id: ${id}`);
-    // array.push (`name: ${name}`);
-    // array.push (`years: ${years}`);
-    // array.push (`genre: ${genre}`);
-    // array.push (`nationality: ${nationality}`);
-    // array.push (`bio: ${bio}`);
-     console.log(array);
+  const newArtist2 = array.concat(newArtist);
+     console.log(newArtist2);
   }
 
   console.log(addArtist(artists, 21, 'Brandon', '1993 - 2020', 'Web Design', 'American', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'));
