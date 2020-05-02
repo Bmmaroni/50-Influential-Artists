@@ -225,6 +225,7 @@ console.log(artists[8].name);
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(array, index) {
+    
     let i = index;
     let a = array[i].name;
     let sentence = `The artist at index ${i} is ${a}`
@@ -246,19 +247,29 @@ function getArtistByIndex(array, index) {
 */
 function removeArtist(array, index) {
     
+    array.splice(index, index + 1);
+    return array;
   }
+
+  console.log(removeArtist(artists, 0));
   
   /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
-    /* Code here */
-
+function lotsOfArt(artists){
+    
+    let newArtists = [];
+    for (let i = 0; i < artists.length; i++){
+      if (artists[i].paintings >= 100){
+        newArtists.push(artists[i].name);
+      }
+    }
+    return newArtists;
   }
 
+ //console.log(lotsOfArt(artists));
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
@@ -269,11 +280,25 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist(array, id, name, years, genre, nationality, bio){
+  const newArtist = {
+            id : id,
+            name: name,
+            genre: genre,
+            nationality: nationality,
+            bio: bio
+          }  
+  array.concat(newArtist);
+    // array.push (`id: ${id}`);
+    // array.push (`name: ${name}`);
+    // array.push (`years: ${years}`);
+    // array.push (`genre: ${genre}`);
+    // array.push (`nationality: ${nationality}`);
+    // array.push (`bio: ${bio}`);
+     console.log(array);
   }
+
+  console.log(addArtist(artists, 21, 'Brandon', '1993 - 2020', 'Web Design', 'American', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'));
 
 
 
