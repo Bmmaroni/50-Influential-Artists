@@ -3,18 +3,13 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
+    .flex-box(column, center, center);
+    width: 80%;
     margin: 0 auto;
 }
 
 .title-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        .flex-box(column, center, center);
         width: 100%;
         text-align: center;
         background-image: url(../assets/home.png);
@@ -43,9 +38,7 @@ body {
 
     .artist {
         width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        .flex-box(column, center, center);
     
         img {
             width: 60%;
