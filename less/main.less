@@ -6,6 +6,10 @@ body {
     .flex-box(column, center, center);
     width: 80%;
     margin: 0 auto;
+
+    @media @mobile {
+        width: 95%;
+    }
 }
 
 .title-container {
@@ -16,46 +20,81 @@ body {
         padding: 20%;
         margin-bottom: 2.5%;
 
-        
+        @media @mobile {
+            padding: 15%;
+        }
 
         h1 {
             margin: 0 auto;
             font-size: 6rem;
             color: white;
             width: 75%;
+
+            @media @mobile {
+                font-size: 4rem;
+                color: blue;
+                margin: 0;
+                width: 100%;
+            }
         }
 
         button {
-            margin: 0 auto;
-            font-size: 3rem;
+           .contact-button(250px, 50px);
         }
- }
+}
 
 .artists-container {
     display: flex;
     width: 95%;
     margin: 2.5% auto;
 
-    .artist {
-        width: 50%;
-        .flex-box(column, center, center);
-    
-        img {
-            width: 60%;
-            height: 50%;
-            border-radius: 10px;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-            font-size: 2rem;
-            padding: 2%;
-        }
-
-        .bio {
-            width: 90%;
-            font-size: 1.2rem;
-        }
+    @media @mobile {
+        flex-direction: column;
+        align-items: center;
     }
+    
+        .artist {
+            width: 50%;
+            .flex-box(column, default, center);
+
+            @media @mobile {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        
+            img {
+                width: 60%;
+                height: 50%;
+                border-radius: 10px;
+
+                @media @mobile{
+                    width: 100%;
+                }
+
+                &:hover {
+                    opacity: 80%;
+                }
+            }
+
+             a {
+                text-decoration: none;
+                color: black;
+                font-size: 2rem;
+                padding: 2%;
+
+                @media @mobile {
+                    text-align: center;
+                    font-size: 2.5rem;
+                }
+            }
+
+            .bio {
+                width: 90%;
+                font-size: 1.2rem;
+
+                @media @mobile {
+                    text-align: center;
+                }
+            }
+        }
 }

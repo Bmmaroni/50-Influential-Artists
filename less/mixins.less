@@ -1,3 +1,4 @@
+@mobile: ~'(max-width: 500px)';
 .flex-box(@fd, @jc, @ai) {
     display: flex;
     flex-direction: @fd;
@@ -5,6 +6,15 @@
     align-items: @ai;
 }
 
-.contact-button() {
-    width: 
+.contact-button(@w, @h) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: @w;
+    height: @h;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
 }
